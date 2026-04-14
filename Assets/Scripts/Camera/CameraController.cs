@@ -79,14 +79,18 @@ namespace GabrielBertasso.Camera
 
         private void Awake()
         {
-            Vector3 offset = _cameraTransform.position - _target.position;
+            Vector3 offset = _cameraTransform.position - GetPivotPosition();
+
             _currentAngle = Mathf.Atan2(offset.x, offset.z) * Mathf.Rad2Deg;
             _targetAngle = _currentAngle;
-            _currentHeight = _cameraTransform.position.y - _target.position.y;
-            _targetHeight = _currentHeight;
 
-            _currentOrbitRadius = new Vector2(offset.x, offset.z).magnitude;
+            float horizontalDist = new Vector2(offset.x, offset.z).magnitude;
+            _currentOrbitRadius = horizontalDist / Mathf.Cos(_isometricPitch * Mathf.Deg2Rad);
             _targetOrbitRadius = _currentOrbitRadius;
+
+            Vector3 orbitOffset = GetOrbitOffset(_currentAngle, _currentOrbitRadius);
+            _currentHeight = offset.y - orbitOffset.y;
+            _targetHeight = _currentHeight;
         }
 
         private void OnEnable()
@@ -107,25 +111,23 @@ namespace GabrielBertasso.Camera
         {
             ApplyElasticBounds();
             SmoothValues();
-            UpdateCameraPosition();
-            UpdateCameraRotation();
+            ApplyCamera();
         }
 
         private void HandleFingerUpdate(LeanFinger finger)
         {
-            if (_ignoreGui && finger.IsOverGui)
-            {
-                return;
-            }
+            if (_ignoreGui && finger.IsOverGui) return;
+            if (_isPinching) return;
 
             _isDragging = true;
             Vector2 delta = finger.ScaledDelta;
             _targetAngle += delta.x * _horizontalSpeed;
             _targetHeight -= delta.y * _verticalSpeed;
-
-            float hardMin = _minHeight - _elasticOvershoot;
-            float hardMax = _maxHeight + _elasticOvershoot;
-            _targetHeight = Mathf.Clamp(_targetHeight, hardMin, hardMax);
+            _targetHeight = Mathf.Clamp(
+                _targetHeight,
+                _minHeight - _elasticOvershoot,
+                _maxHeight + _elasticOvershoot
+            );
         }
 
         private void HandleFingerUp(LeanFinger finger)
@@ -135,10 +137,7 @@ namespace GabrielBertasso.Camera
 
         private void HandleGesture(System.Collections.Generic.List<LeanFinger> fingers)
         {
-            if (_ignoreGui && LeanTouch.GuiInUse)
-            {
-                return;
-            }
+            if (_ignoreGui && LeanTouch.GuiInUse) return;
 
             if (fingers == null || fingers.Count < 2)
             {
@@ -154,116 +153,67 @@ namespace GabrielBertasso.Camera
             }
 
             _isPinching = true;
-
             _targetOrbitRadius *= pinchRatio;
-
-            float hardMin = _minOrbitRadius - _zoomElasticOvershoot;
-            float hardMax = _maxOrbitRadius + _zoomElasticOvershoot;
-            _targetOrbitRadius = Mathf.Clamp(_targetOrbitRadius, hardMin, hardMax);
+            _targetOrbitRadius = Mathf.Clamp(
+                _targetOrbitRadius,
+                _minOrbitRadius - _zoomElasticOvershoot,
+                _maxOrbitRadius + _zoomElasticOvershoot
+            );
         }
 
         private void ApplyElasticBounds()
         {
-            if (_isDragging || _isPinching)
-            {
-                return;
-            }
+            if (_isDragging || _isPinching) return;
 
-            if (_targetHeight < _minHeight)
-            {
-                _targetHeight = Mathf.Lerp(
-                    _targetHeight,
-                    _minHeight,
-                    Time.deltaTime * _elasticReturnSpeed
-                );
-            }
-            else if (_targetHeight > _maxHeight)
-            {
-                _targetHeight = Mathf.Lerp(
-                    _targetHeight,
-                    _maxHeight,
-                    Time.deltaTime * _elasticReturnSpeed
-                );
-            }
+            _targetHeight = ElasticReturn(_targetHeight, _minHeight, _maxHeight, _elasticReturnSpeed);
+            _targetOrbitRadius = ElasticReturn(_targetOrbitRadius, _minOrbitRadius, _maxOrbitRadius, _zoomElasticReturnSpeed);
+        }
 
-            if (_targetOrbitRadius < _minOrbitRadius)
-            {
-                _targetOrbitRadius = Mathf.Lerp(
-                    _targetOrbitRadius,
-                    _minOrbitRadius,
-                    Time.deltaTime * _zoomElasticReturnSpeed
-                );
-            }
-            else if (_targetOrbitRadius > _maxOrbitRadius)
-            {
-                _targetOrbitRadius = Mathf.Lerp(
-                    _targetOrbitRadius,
-                    _maxOrbitRadius,
-                    Time.deltaTime * _zoomElasticReturnSpeed
-                );
-            }
+        private static float ElasticReturn(float value, float min, float max, float speed)
+        {
+            if (value < min)
+                return Mathf.Lerp(value, min, Time.deltaTime * speed);
+
+            if (value > max)
+                return Mathf.Lerp(value, max, Time.deltaTime * speed);
+
+            return value;
         }
 
         private void SmoothValues()
         {
-            _currentAngle = Mathf.LerpAngle(
-                _currentAngle,
-                _targetAngle,
-                _horizontalSmoothing
-            );
-
-            _currentHeight = Mathf.Lerp(
-                _currentHeight,
-                _targetHeight,
-                _verticalSmoothing
-            );
-
-            _currentOrbitRadius = Mathf.Lerp(
-                _currentOrbitRadius,
-                _targetOrbitRadius,
-                _zoomSmoothing
-            );
+            _currentAngle = Mathf.LerpAngle(_currentAngle, _targetAngle, _horizontalSmoothing);
+            _currentHeight = Mathf.Lerp(_currentHeight, _targetHeight, _verticalSmoothing);
+            _currentOrbitRadius = Mathf.Lerp(_currentOrbitRadius, _targetOrbitRadius, _zoomSmoothing);
         }
 
-        private void UpdateCameraPosition()
+        private void ApplyCamera()
         {
-            var pivotPosition = _target.position;
-            pivotPosition.y += _pivotHeightOffset;
+            Vector3 pivotPosition = GetPivotPosition();
+            Vector3 orbitOffset = GetOrbitOffset(_currentAngle, _currentOrbitRadius);
 
-            var orbitRotation = Quaternion.Euler(_isometricPitch, _currentAngle, 0f);
-            var orbitOffset = orbitRotation * (Vector3.back * _currentOrbitRadius);
-
-            Vector3 cameraPosition = pivotPosition + orbitOffset + (Vector3.up * _currentHeight);
-
-            _cameraTransform.position = cameraPosition;
-        }
-
-        private void UpdateCameraRotation()
-        {
+            _cameraTransform.position = pivotPosition + orbitOffset + Vector3.up * _currentHeight;
             _cameraTransform.rotation = Quaternion.Euler(_isometricPitch, _currentAngle, 0f);
+        }
+
+        private Vector3 GetPivotPosition()
+        {
+            Vector3 pivot = _target.position;
+            pivot.y += _pivotHeightOffset;
+            return pivot;
+        }
+
+        private Vector3 GetOrbitOffset(float angle, float radius)
+        {
+            return Quaternion.Euler(_isometricPitch, angle, 0f) * (Vector3.back * radius);
         }
 
         private void OnValidate()
         {
-            if (_minHeight > _maxHeight)
-            {
-                _maxHeight = _minHeight;
-            }
-
-            if (_minOrbitRadius > _maxOrbitRadius)
-            {
-                _maxOrbitRadius = _minOrbitRadius;
-            }
-
-            if (_zoomElasticOvershoot < 0f)
-            {
-                _zoomElasticOvershoot = 0f;
-            }
-
-            if (_zoomElasticReturnSpeed < 0f)
-            {
-                _zoomElasticReturnSpeed = 0f;
-            }
+            if (_minHeight > _maxHeight) _maxHeight = _minHeight;
+            if (_minOrbitRadius > _maxOrbitRadius) _maxOrbitRadius = _minOrbitRadius;
+            if (_zoomElasticOvershoot < 0f) _zoomElasticOvershoot = 0f;
+            if (_zoomElasticReturnSpeed < 0f) _zoomElasticReturnSpeed = 0f;
         }
     }
 }

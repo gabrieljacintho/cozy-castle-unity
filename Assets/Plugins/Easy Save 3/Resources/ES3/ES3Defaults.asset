@@ -36,13 +36,19 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - Assembly-CSharp-firstpass
+    - Boxophobic.Utils.Scripts
+    - CW.Common
     - DOTween.Modules
     - DOTweenPro.Scripts
     - EasySave3
+    - GabrielBertasso
     - I2Localization
+    - LeanCommon
+    - LeanTouch
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
+  onlyAddReferencesFromObjectsWithES3Referenceable: 0
   addAllPrefabsToManager: 1
   collectDependenciesDepth: 4
   collectDependenciesTimeout: 10

@@ -1,0 +1,6 @@
+AssetsThirdPartyPrincessTexturesDetailsT_Princess_Hair_BlondeGold.tga filter=lfs diff=lfs merge=lfs -text
+AssetsThirdPartyPrincessTexturesDetailsT_Princess_Hair_BlondeGold2.tga filter=lfs diff=lfs merge=lfs -text
+AssetsThirdPartyPrincessTexturesIDT_Princess_ClothU_BaseColor_ID.tga filter=lfs diff=lfs merge=lfs -text
+AssetsThirdPartyPrincessTexturesUnityBody_BaseColor.tga filter=lfs diff=lfs merge=lfs -text
+AssetsThirdPartyPrincessTexturesUnityT_Princess_Body_Normal.tga filter=lfs diff=lfs merge=lfs -text
+AssetsThirdPartyPolyartPolyartStudioDreamscapeTowerScenesOldDemoTerrainData.asset filter=lfs diff=lfs merge=lfs -text

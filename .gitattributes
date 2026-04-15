@@ -142,4 +142,4 @@ Assets/Plugins/**       linguist-vendored
 *.scene.unity lfs
 Assets/Plugins/FMOD/**/*.bundle text eol=lf
 Assets/Plugins/FMOD/**/Info.plist text eol=lf
-AssetsThirdPartyPolyartPolyartStudioDreamscapeTowerScenesOldDemoTerrainData.asset filter=lfs diff=lfs merge=lfs -text
+Assets/ThirdParty/Polyart/PolyartStudio/DreamscapeTower/Scenes/Old/DemoTerrainData.asset filter=lfs diff=lfs merge=lfs -text

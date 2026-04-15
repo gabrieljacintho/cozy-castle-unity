@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: c271d44e9ab9bbe45955326841e185b0
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 318370
+  packageName: The Princess
+  packageVersion: 1.0
+  assetPath: Assets/Princess/Prefabs/Parts/SK_Princess_Body.prefab
+  uploadId: 751875

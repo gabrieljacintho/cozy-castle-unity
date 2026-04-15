@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3480a2915cdaeaf4784dfeaa3cfb98de
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 318370
+  packageName: The Princess
+  packageVersion: 1.0
+  assetPath: Assets/Princess/Materials/Body.mat
+  uploadId: 751875

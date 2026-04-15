@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 74e80998837b93142b37e0970d3f8dc6
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 36300000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 247583
+  packageName: Dreamscape Nature Tower - Stylized Fantasy Open World
+  packageVersion: 1.1
+  assetPath: Assets/Polyart/PolyartStudio/DreamscapeTower/Scenes/Old/DemoScene/OcclusionCullingData.asset
+  uploadId: 851176

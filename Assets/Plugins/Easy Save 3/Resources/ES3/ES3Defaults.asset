@@ -35,6 +35,7 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
+    - Assembly-CSharp
     - Assembly-CSharp-firstpass
     - Boxophobic.Utils.Scripts
     - CW.Common
@@ -45,6 +46,8 @@ MonoBehaviour:
     - I2Localization
     - LeanCommon
     - LeanTouch
+    - MeshBakerCore
+    - MeshBakerExamples
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

@@ -1,0 +1,9 @@
+fileFormatVersion: 2
+guid: ce357bbdee02d3049a5ec6c026da0248
+AssetOrigin:
+  serializedVersion: 1
+  productId: 5017
+  packageName: Mesh Baker
+  packageVersion: 3.40.1
+  assetPath: Assets/MeshBaker/Editor/searchFilters/MB3_GroupByLayerIndex.cs
+  uploadId: 797172

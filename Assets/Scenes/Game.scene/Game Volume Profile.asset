@@ -1144,7 +1144,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7f53d442396c644b198ad641a34212ce, type: 3}
   m_Name: RadiantGlobalIllumination
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::RadiantGI.Universal.RadiantGlobalIllumination
-  active: 1
+  active: 0
   indirectIntensity:
     m_OverrideState: 1
     m_Value: 2

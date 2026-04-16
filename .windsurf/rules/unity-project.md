@@ -5,12 +5,46 @@ trigger: always_on
 
 # Context
 *   Game development
-*   Unity 6 URP Deferred
+*   Unity 6 URP
 *   C# programming language
 *   Root Namespace: GabrielBertasso
 *   Target Platforms: PC
 *   Graphics: 3D
 *   Never assume anything, always ask me.
+# Code Generation
+*   Always include proper using statements.
+*   Include error handling and null checks.
+*   Use modern C# features (null-conditional operators, expression bodies).
+*   Follow SOLID principles adapted for Unity's component system.
+*   The year is 2026, make sure we apply the proper year for searches and updates.
+*   Always write everything in English.
+*   Always avoid duplicate code and logic.
+*   Always keep your code clean and well-organized.
+*   Ensure that the code architecture is always well-designed.
+*   Before implementing any tasks, always read all relevant files completely.
+# Unity Specifications
+*   Always use New Input System with InputActionReference instead of the Old Input System.
+*   Never write code to enable or disable InputActions unless I ask you to.
+*   Never call the DontDestroyOnLoad method unless I ask you to.
+*   Create ScriptableObjects with CreateAssetMenu attribute for data.
+*   Use async/await with CancellationTokens for non-Unity operations.
+*   Use coroutines for Unity-specific timing (WaitForEndOfFrame, etc.).
+*   Never create .meta files.
+*   Compatibility Mode (Render Graph disabled) is deprecated
+## Performance
+*   Never use GetComponent in the Update/FixedUpdate/LateUpdate functions.
+*   Cache functions like WaitForSeconds: e.g. private static readonly WaitForSeconds WaitOneSecond = new WaitForSeconds(1f);
+*   Use the TryGetComponent function when component might not exist.
+*   Use the CompareTag function instead of gameObject.tag ==
+# Fish-Net Specifications
+*   Use FishNet v4 to implement online multiplayer.
+*   Always consider client-host architecture.
+*   Always use SyncVar<> instead of \[SyncVar\].
+# Odin Inspector Specifications
+*   Use the ShowIf and HideIf attributes to dynamically display only useful variables in the inspector.
+*   Use the Button attribute on functions that may be useful to call from the inspector for testing.
+*   Use the ShowInInspector and ReadOnly attributes on variables that may be useful to view in the inspector but should not be changed through the inspector.
+*   If necessary, check the Odin Inspector documentation here: https://odininspector.com/documentation
 # Code Style Guide
 ## Naming Rules
 *   Types and namespaces: UpperCamelCase
@@ -94,36 +128,3 @@ Here are some dos and don’ts for comments:
 *   Use a tooltip instead of a comment for serialized fields.
 *   Place the comment on a separate line when possible, not at the end of a line of code.
 *   Always avoid writing comments or tooltips. Only write them when they are absolutely relevant.
-## Odin Inspector
-*   Use the ShowIf and HideIf attributes to dynamically display only useful variables in the inspector.
-*   Use the Button attribute on functions that may be useful to call from the inspector for testing.
-*   Use the ShowInInspector and ReadOnly attributes on variables that may be useful to view in the inspector but should not be changed through the inspector.
-*   If necessary, check the Odin Inspector documentation here: https://odininspector.com/documentation
-# Unity Specifications
-*   Always use New Input System with InputActionReference instead of the Old Input System.
-*   Never write code to enable or disable InputActions unless I ask you to.
-*   Never call the DontDestroyOnLoad method unless I ask you to.
-*   Create ScriptableObjects with CreateAssetMenu attribute for data.
-*   Use async/await with CancellationTokens for non-Unity operations.
-*   Use coroutines for Unity-specific timing (WaitForEndOfFrame, etc.).
-*   Never create .meta files.
-# Performance
-*   Never use GetComponent in the Update/FixedUpdate/LateUpdate functions.
-*   Cache functions like WaitForSeconds: e.g. private static readonly WaitForSeconds WaitOneSecond = new WaitForSeconds(1f);
-*   Use the TryGetComponent function when component might not exist.
-*   Use the CompareTag function instead of gameObject.tag ==
-# Code Generation
-*   Always include proper using statements.
-*   Include error handling and null checks.
-*   Use modern C# features (null-conditional operators, expression bodies).
-*   Follow SOLID principles adapted for Unity's component system.
-*   The year is 2026, make sure we apply the proper year for searches and updates.
-*   Always write everything in English.
-*   Always avoid duplicate code and logic.
-*   Always keep your code clean and well-organized.
-*   Ensure that the code architecture is always well-designed.
-*   Before implementing any tasks, always read all relevant files completely.
-# Fish-Net
-*   Use FishNet v4 to implement online multiplayer.
-*   Always consider client-host architecture.
-*   Always use SyncVar<> instead of \[SyncVar\].

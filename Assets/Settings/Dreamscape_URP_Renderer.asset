@@ -1,5 +1,40 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6414880709575026242
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 286e45839c35bbc4a9e312a4513b5290, type: 3}
+  m_Name: MeshSectionRenderFeature
+  m_EditorClassIdentifier: GabrielBertasso::GabrielBertasso.Rendering.MeshSectionRenderFeature
+  m_Active: 1
+  FeatureSettings:
+    ApplyPassEvent: 450
+    IntersectionPassEvent: 450
+    ApplyShader: {fileID: 4800000, guid: 7aa439688b3a511459bc179de17da948, type: 3}
+    IntersectionShader: {fileID: 4800000, guid: 22e99c0f26be89e4c908d09d933161b2, type: 3}
+  _applyMaterial: {fileID: 0}
+  _intersectionMaterial: {fileID: 0}
+--- !u!114 &-5714743311377879800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877286f1b69ba0940a6380d1d8618ad4, type: 3}
+  m_Name: MeshSectionCapFeature
+  m_EditorClassIdentifier: GabrielBertasso::GabrielBertasso.Visual.MeshSection.MeshSectionCapFeature
+  m_Active: 1
+  _capMaterial: {fileID: 2100000, guid: b9899277f50cf2747bb5cba4c7693ca2, type: 2}
+  _capShaderName: GabrielBertasso/MeshSection/MeshSectionCap
 --- !u!114 &-4584536443928340283
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +150,8 @@ MonoBehaviour:
   - {fileID: 6039183844919475988}
   - {fileID: 1690927218652292838}
   - {fileID: -4584536443928340283}
-  m_RendererFeatureMap: b0ba04f90ebd2e64ba1e5af86cc667f214ffb3c1b57dcf53e626cfb058617717c598d1e7647460c0
+  - {fileID: -5714743311377879800}
+  m_RendererFeatureMap: b0ba04f90ebd2e64ba1e5af86cc667f214ffb3c1b57dcf53e626cfb058617717c598d1e7647460c0082dc87e3c27b1b0
   m_UseNativeRenderPass: 0
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
@@ -137,7 +173,7 @@ MonoBehaviour:
     failOperation: 0
     zFailOperation: 0
   m_ShadowTransparentReceive: 1
-  m_RenderingMode: 1
+  m_RenderingMode: 2
   m_DepthPrimingMode: 0
   m_CopyDepthMode: 0
   m_DepthAttachmentFormat: 0
@@ -158,7 +194,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: ScreenSpaceReflections::ShinySSRR.ShinySSRR
   m_Active: 1
   renderPassEvent: 500
-  useDeferred: 1
+  useDeferred: 0
   enableScreenSpaceNormalsPass: 0
   customSmoothnessMetallicPass: 0
   customSmoothnessMetallicPassSource: 0
@@ -167,6 +203,26 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   ignoreReflectionProbes: 1
+--- !u!114 &4463285425263604274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 286e45839c35bbc4a9e312a4513b5290, type: 3}
+  m_Name: MeshSectionRenderFeature
+  m_EditorClassIdentifier: GabrielBertasso::GabrielBertasso.Rendering.MeshSectionRenderFeature
+  m_Active: 1
+  FeatureSettings:
+    ApplyPassEvent: 450
+    IntersectionPassEvent: 450
+    ApplyShader: {fileID: 0}
+    IntersectionShader: {fileID: 0}
+  _applyMaterial: {fileID: 0}
+  _intersectionMaterial: {fileID: 0}
 --- !u!114 &6039183844919475988
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,7 +236,7 @@ MonoBehaviour:
   m_Name: RadiantRenderFeature
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::RadiantGI.Universal.RadiantRenderFeature
   m_Active: 1
-  renderingPath: 1
+  renderingPath: 0
   ignorePostProcessingOption: 1
   ignoreOverlayCameras: 1
   camerasLayerMask:

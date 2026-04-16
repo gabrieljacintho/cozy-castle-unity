@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 4120f81d875462849981485046bee1f9
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 289267
+  packageName: MC Core Motion - Believable 3D Animations by MoCap Central
+  packageVersion: 1.6.1
+  assetPath: Assets/MoCapCentral/MC_CoreMotion/Animations/ctrl_Idle_Ready.controller
+  uploadId: 896722

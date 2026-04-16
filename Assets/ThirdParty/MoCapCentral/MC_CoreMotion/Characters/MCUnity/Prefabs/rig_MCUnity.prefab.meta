@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: 3b6f84ff66577424489df71ea0ff5e98
+PrefabImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 289267
+  packageName: MC Core Motion - Believable 3D Animations by MoCap Central
+  packageVersion: 1.6.1
+  assetPath: Assets/MoCapCentral/MC_CoreMotion/Characters/MCUnity/Prefabs/rig_MCUnity.prefab
+  uploadId: 896722

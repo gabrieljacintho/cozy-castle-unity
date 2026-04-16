@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1dfa0ce837f270c45b3d4645c05f65d3
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 289267
+  packageName: MC Core Motion - Believable 3D Animations by MoCap Central
+  packageVersion: 1.6.1
+  assetPath: Assets/MoCapCentral/MC_CoreMotion/Animations/ctrl_Locomotion_Step_Stand.controller
+  uploadId: 896722

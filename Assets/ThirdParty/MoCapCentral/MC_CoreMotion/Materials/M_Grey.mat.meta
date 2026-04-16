@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 15229de0f7f249a478ee379c0953d84f
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 2100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 289267
+  packageName: MC Core Motion - Believable 3D Animations by MoCap Central
+  packageVersion: 1.6.1
+  assetPath: Assets/MoCapCentral/MC_CoreMotion/Materials/M_Grey.mat
+  uploadId: 896722

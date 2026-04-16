@@ -23,6 +23,7 @@ namespace GabrielBertasso.Navigation
 
         private NavMeshAgent _agent;
         private string _activeBoolParameterName;
+        private string _activeIntParameterName;
         private Coroutine _patrolRoutine;
         private bool _hasReachedDestination;
 
@@ -56,7 +57,7 @@ namespace GabrielBertasso.Navigation
                 _patrolRoutine = null;
             }
 
-            ClearActiveBool();
+            ClearActiveParameters();
         }
 
         private void OnValidate()
@@ -87,17 +88,26 @@ namespace GabrielBertasso.Navigation
                     continue;
                 }
 
-                ClearActiveBool();
+                ClearActiveParameters();
+                
+                waypoint.GenerateRandomValue();
                 _activeBoolParameterName = waypoint.AnimatorBoolParameterName;
+                _activeIntParameterName = waypoint.AnimatorIntParameterName;
+                
                 if (!string.IsNullOrEmpty(_activeBoolParameterName))
                 {
                     _animator.SetBool(_activeBoolParameterName, true);
+                }
+                
+                if (!string.IsNullOrEmpty(_activeIntParameterName))
+                {
+                    _animator.SetInteger(_activeIntParameterName, waypoint.CurrentRandomValue);
                 }
 
                 float stayDuration = Random.Range(_minStaySeconds, _maxStaySeconds);
                 yield return new WaitForSeconds(stayDuration);
 
-                ClearActiveBool();
+                ClearActiveParameters();
             }
         }
 
@@ -131,38 +141,44 @@ namespace GabrielBertasso.Navigation
 
         private bool IsConsideredArrivedAtDestination()
         {
-            if (_agent.pathStatus == NavMeshPathStatus.PathInvalid)
+            bool closeEnoughByRemaining = false;
+            if (_agent.pathStatus != NavMeshPathStatus.PathInvalid && !_agent.pathPending)
             {
-                return false;
+                closeEnoughByRemaining = _agent.remainingDistance <= _agent.stoppingDistance;
             }
-
-            if (_agent.pathPending)
-            {
-                return false;
-            }
-
-            bool closeEnoughByRemaining = _agent.remainingDistance <= _agent.stoppingDistance;
-
+            
             float distanceToDestination = Vector3.Distance(_agent.transform.position, _agent.destination);
             bool closeEnoughByPosition = distanceToDestination <= _agent.stoppingDistance;
 
-            if (!closeEnoughByRemaining && !closeEnoughByPosition)
-            {
-                return false;
-            }
-
-            return !_agent.hasPath || _agent.velocity.sqrMagnitude < 0.01f;
+            return closeEnoughByRemaining || closeEnoughByPosition;
         }
 
-        private void ClearActiveBool()
+        private void ClearActiveParameters()
         {
-            if (string.IsNullOrEmpty(_activeBoolParameterName) || _animator == null)
+            if (_animator == null)
             {
                 return;
             }
 
-            _animator.SetBool(_activeBoolParameterName, false);
-            _activeBoolParameterName = null;
+            if (!string.IsNullOrEmpty(_activeBoolParameterName))
+            {
+                _animator.SetBool(_activeBoolParameterName, false);
+                _activeBoolParameterName = null;
+            }
+
+            if (!string.IsNullOrEmpty(_activeIntParameterName))
+            {
+                _animator.SetInteger(_activeIntParameterName, -1);
+                _activeIntParameterName = null;
+            }
+
+            foreach (NavMeshWaypoint waypoint in _waypoints)
+            {
+                if (waypoint != null)
+                {
+                    waypoint.ResetRandomValue();
+                }
+            }
         }
     }
 }

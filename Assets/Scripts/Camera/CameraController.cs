@@ -81,7 +81,7 @@ namespace GabrielBertasso.Camera
         {
             Vector3 offset = _cameraTransform.position - GetPivotPosition();
 
-            _currentAngle = Mathf.Atan2(offset.x, offset.z) * Mathf.Rad2Deg;
+            _currentAngle = Mathf.Atan2(-offset.x, -offset.z) * Mathf.Rad2Deg;
             _targetAngle = _currentAngle;
 
             float horizontalDist = new Vector2(offset.x, offset.z).magnitude;

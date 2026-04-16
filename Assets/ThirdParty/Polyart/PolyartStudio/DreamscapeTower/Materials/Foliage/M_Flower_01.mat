@@ -117,7 +117,7 @@ Material:
     - _CUSTOM_INSTANCING: 0
     - _CastShadows: 1
     - _Color_Intensity: 0.1
-    - _Cull: 2
+    - _Cull: 0
     - _DitherBottomLevel: 0
     - _DitherFade: 0
     - _Dither_Bottom_Level: 0
@@ -170,6 +170,7 @@ Material:
     - _Wind_Small_Intensity: 0.5
     - _Wind_Small_Scale: 40
     - _WorkflowMode: 1
+    - _XRMotionVectorsPass: 1
     - _ZTest: 4
     - _ZWrite: 1
     - _ZWriteControl: 0

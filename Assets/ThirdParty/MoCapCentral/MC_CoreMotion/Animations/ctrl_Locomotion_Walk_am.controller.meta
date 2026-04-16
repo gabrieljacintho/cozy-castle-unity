@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 8b245d62902a8474abb133f765d28b8a
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 289267
+  packageName: MC Core Motion - Believable 3D Animations by MoCap Central
+  packageVersion: 1.6.1
+  assetPath: Assets/MoCapCentral/MC_CoreMotion/Animations/ctrl_Locomotion_Walk_am.controller
+  uploadId: 896722

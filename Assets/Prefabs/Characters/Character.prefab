@@ -11,7 +11,9 @@ GameObject:
   - component: {fileID: 9184283656090139347}
   - component: {fileID: 2588723737701150549}
   - component: {fileID: 1398523924856290780}
+  - component: {fileID: 3404273027254312788}
   - component: {fileID: 8817441660476087674}
+  - component: {fileID: 4009177525120284146}
   m_Layer: 6
   m_Name: Character
   m_TagString: Untagged
@@ -48,7 +50,7 @@ Animator:
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
-  m_ApplyRootMotion: 0
+  m_ApplyRootMotion: 1
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_AnimatePhysics: 0
@@ -67,11 +69,11 @@ NavMeshAgent:
   m_Enabled: 1
   m_AgentTypeID: 0
   m_Radius: 0.5
-  m_Speed: 3.5
+  m_Speed: 1
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 1
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -79,6 +81,18 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
+--- !u!114 &3404273027254312788
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183119511597876613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 795693a051ceaf84db6a3718d3e03842, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GabrielBertasso::NavMeshAgentDebugger
 --- !u!114 &8817441660476087674
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -95,6 +109,24 @@ MonoBehaviour:
   _waypoints: []
   _minStaySeconds: 5
   _maxStaySeconds: 10
+--- !u!114 &4009177525120284146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5183119511597876613}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e4758736047b7614cbc1a9fe64ade12f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: GabrielBertasso::GabrielBertasso.AI.RootMotionNavAgent
+  _moveXParameter: MoveX
+  _moveYParameter: MoveY
+  _parameterSmoothTime: 0.15
+  _arrivalThreshold: 0.2
+  _referenceAnimationSpeed: 2
+  _measuredSpeedSmoothTime: 0.1
 --- !u!1 &6891746857658105397
 GameObject:
   m_ObjectHideFlags: 0

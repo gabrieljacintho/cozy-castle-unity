@@ -46,8 +46,11 @@ MonoBehaviour:
     - I2Localization
     - LeanCommon
     - LeanTouch
+    - MagicaCloth2Example
+    - MagicaClothV2
     - MeshBakerCore
     - MeshBakerExamples
+    - ScreenSpaceReflections
     showAdvancedSettings: 0
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

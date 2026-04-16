@@ -5,7 +5,7 @@ trigger: always_on
 
 # Context
 *   Game development
-*   Unity 6 URP
+*   Unity 6 URP Deferred
 *   C# programming language
 *   Root Namespace: GabrielBertasso
 *   Target Platforms: PC

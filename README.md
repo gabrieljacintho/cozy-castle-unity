@@ -1,5 +1,5 @@
 # Cozy Castle
-Cozy Castle is a cozy castle tower diorama game for mobile devices developed with Unity Engine and C#.
+Cozy Castle is a cozy castle tower diorama game for mobile devices developed with Unity Engine, C#, and AI tools.
 
 ## 🎮 Controls
 Get ready to dive into the action with these intuitive controls:

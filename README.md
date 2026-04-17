@@ -16,3 +16,11 @@ Get ready to dive into the action with these intuitive controls:
 ![CozyCastle_Screenshot_03](https://github.com/user-attachments/assets/2dec1977-e9f0-4d21-9864-d8c3df78a084)
 ![CozyCastle_Screenshot_04](https://github.com/user-attachments/assets/cf8b1b00-e8aa-4694-a655-2067292cfd75)
 ![CozyCastle_Screenshot_05](https://github.com/user-attachments/assets/2e92f328-0a48-4ed4-a105-2ab0673a51e4)
+
+## Credits
+* **Meshy** and **Tripo Studio** for 3D art generation
+* **Claude**, **Cursor** and **Windsurf** for code generation
+* **Gemini** and **ChatGPT** for image and prompt generation
+* **Suno** for music generation
+* **Unity Asset Store** for various game assets
+* **ClickUp** for task management

@@ -143,3 +143,4 @@ Assets/Plugins/**       linguist-vendored
 Assets/Plugins/FMOD/**/*.bundle text eol=lf
 Assets/Plugins/FMOD/**/Info.plist text eol=lf
 Assets/ThirdParty/Polyart/PolyartStudio/DreamscapeTower/Scenes/Old/DemoTerrainData.asset filter=lfs diff=lfs merge=lfs -text
+Assets/Prefabs/_Baked/BookShelf_Baked0-mesh.asset filter=lfs diff=lfs merge=lfs -text

@@ -39,6 +39,7 @@ MonoBehaviour:
     - Assembly-CSharp-firstpass
     - Boxophobic.Utils.Scripts
     - CW.Common
+    - Domain_Reload
     - DOTween.Modules
     - DOTweenPro.Scripts
     - EasySave3

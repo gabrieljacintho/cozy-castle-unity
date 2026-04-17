@@ -1,7 +1,14 @@
 fileFormatVersion: 2
 guid: 50cb27ff7dd676b468d74ef617d7067e
+AssetOrigin:
+  serializedVersion: 1
+  productId: 318370
+  packageName: The Princess
+  packageVersion: 1.0
+  assetPath: Assets/Princess/Mesh/SK_Princess_Underwear.fbx
+  uploadId: 751875
 ModelImporter:
-  serializedVersion: 21300
+  serializedVersion: 24200
   internalIDToNameTable: []
   externalObjects:
   - first:
@@ -56,8 +63,6 @@ ModelImporter:
     optimizeGameObjects: 0
     removeConstantScaleCurves: 1
     motionNodeName: 
-    rigImportErrors: 
-    rigImportWarnings: 
     animationImportErrors: 
     animationImportWarnings: 
     animationRetargetingWarnings: 
@@ -76,10 +81,11 @@ ModelImporter:
   meshes:
     lODScreenPercentages: []
     globalScale: 1
-    meshCompression: 0
+    meshCompression: 3
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
+    importPhysicalCameras: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -97,6 +103,9 @@ ModelImporter:
     maxBonesPerVertex: 4
     minBoneWeight: 0.001
     optimizeBones: 1
+    generateMeshLods: 0
+    meshLodGenerationFlags: 0
+    maximumMeshLod: -1
     meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
@@ -107,6 +116,7 @@ ModelImporter:
     secondaryUVMinObjectScale: 1
     secondaryUVPackMargin: 4
     useFileScale: 1
+    strictVertexDataChecks: 0
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -795,8 +805,7 @@ ModelImporter:
     - name: upperarm_twist_02_l
       parentName: upperarm_l
       position: {x: -0.15688515, y: 0.0028175833, z: 0.0012211666}
-      rotation: {x: 0.00000003166496, y: -0.000000029802315, z: -0.000000071711824,
-        w: 1}
+      rotation: {x: 0.00000003166496, y: -0.000000029802315, z: -0.000000071711824, w: 1}
       scale: {x: 1.0000001, y: 1.0000005, z: 1.0000001}
     - name: clavicle_r
       parentName: spine_05
@@ -931,8 +940,7 @@ ModelImporter:
     - name: upperarm_twist_02_r
       parentName: upperarm_r
       position: {x: 0.15688863, y: -0.0028178175, z: -0.0012191329}
-      rotation: {x: 0.000000022351736, y: -0.000000089406946, z: -0.000000046566118,
-        w: 1}
+      rotation: {x: 0.000000022351736, y: -0.000000089406946, z: -0.000000046566118, w: 1}
       scale: {x: 0.9999998, y: 1, z: 1.0000001}
     - name: thigh_l
       parentName: pelvis
@@ -1032,15 +1040,9 @@ ModelImporter:
   humanoidOversampling: 1
   avatarSetup: 1
   addHumanoidExtraRootOnlyWhenUsingAvatar: 1
+  importBlendShapeDeformPercent: 0
   remapMaterialsIfMaterialImportModeIsNone: 0
   additionalBone: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 318370
-  packageName: The Princess
-  packageVersion: 1.0
-  assetPath: Assets/Princess/Mesh/SK_Princess_Underwear.fbx
-  uploadId: 751875

@@ -1,0 +1,10 @@
+# ninja log v5
+38	1380	7981659865133421	GameActivity/CMakeFiles/game.dir/UGAEntry.cpp.o	41ab4558918555f2
+11	1392	7981659865248584	GameActivity/CMakeFiles/game.dir/UGAConfiguration.cpp.o	c17d621f1822cd7e
+28	1421	7981659865567751	GameActivity/CMakeFiles/game.dir/UGAInputKeyEvent.cpp.o	2ad20746086b0c1e
+1	1479	7981659866138146	GameActivity/CMakeFiles/game.dir/UGADebug.cpp.o	a4f5f0fc9bd7a552
+71	1509	7981659866446043	GameActivity/CMakeFiles/game.dir/UGAInputMotionEvent.cpp.o	808304d3a430e9cc
+59	1563	7981659866985971	GameActivity/CMakeFiles/game.dir/UGASoftKeyboard.cpp.o	b8914e921ee0dab2
+48	1675	7981659868130083	GameActivity/CMakeFiles/game.dir/UGAInput.cpp.o	5541280f510739e0
+19	1766	7981659869004100	GameActivity/CMakeFiles/game.dir/UGAApplication.cpp.o	4d38ebb6f7231cfc
+1767	1854	7981659869905454	C:/Users/gabri/OneDrive/Documentos/Unity Projects/cozy-castle-dev-test-unity/Library/Bee/Android/Prj/IL2CPP/Gradle/unityLibrary/build/intermediates/cxx/RelWithDebInfo/06sc5xo1/obj/arm64-v8a/libgame.so	a60426d2c32d5bf4

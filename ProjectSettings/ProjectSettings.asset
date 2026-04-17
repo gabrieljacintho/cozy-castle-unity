@@ -147,7 +147,8 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 0.1.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -299,7 +300,14 @@ PlayerSettings:
   AndroidAppBundleSizeToValidate: 150
   AndroidReportGooglePlayAppDependencies: 1
   androidSymbolsSizeThreshold: 800
-  m_BuildTargetIcons: []
+  m_BuildTargetIcons:
+  - m_BuildTarget: 
+    m_Icons:
+    - serializedVersion: 2
+      m_Icon: {fileID: 2800000, guid: a72444e847d91d44da6958a58ffdb167, type: 3}
+      m_Width: 128
+      m_Height: 128
+      m_Kind: 0
   m_BuildTargetPlatformIcons:
   - m_BuildTarget: iPhone
     m_Icons:
@@ -531,10 +539,13 @@ PlayerSettings:
   - m_BuildTarget: Standalone
     m_StaticBatching: 0
     m_DynamicBatching: 1
+  - m_BuildTarget: Android
+    m_StaticBatching: 0
+    m_DynamicBatching: 1
   m_BuildTargetShaderSettings: []
   m_BuildTargetGraphicsJobs:
   - m_BuildTarget: AndroidPlayer
-    m_GraphicsJobs: 0
+    m_GraphicsJobs: 1
   m_BuildTargetGraphicsJobMode: []
   m_BuildTargetGraphicsAPIs:
   - m_BuildTarget: iOSSupport
@@ -853,7 +864,7 @@ PlayerSettings:
     QNX: ES3_TMPRO;ES3_UGUI;DOTWEEN;TextMeshPro;DOTWEEN_TEXTMESHPRO;UNITY_VISUAL_SCRIPTING
     ReservedCFE: DOTWEEN;TextMeshPro
     Server: ES3_TMPRO;ES3_UGUI;UNITY_VISUAL_SCRIPTING
-    Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;ES3_TMPRO;ES3_UGUI;DOTWEEN;TextMeshPro;DOTWEEN_TEXTMESHPRO;UNITY_VISUAL_SCRIPTING
+    Standalone: ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;ES3_TMPRO;ES3_UGUI;DOTWEEN;TextMeshPro;DOTWEEN_TEXTMESHPRO;UNITY_VISUAL_SCRIPTING;MAGICACLOTH2
     VisionOS: ES3_TMPRO;ES3_UGUI;DOTWEEN;TextMeshPro;DOTWEEN_TEXTMESHPRO;UNITY_VISUAL_SCRIPTING
     WebGL: ES3_TMPRO;ES3_UGUI;DOTWEEN;TextMeshPro;ODIN_INSPECTOR;ODIN_INSPECTOR_3;ODIN_INSPECTOR_3_1;ODIN_INSPECTOR_3_2;ODIN_INSPECTOR_3_3;DOTWEEN_TEXTMESHPRO;UNITY_VISUAL_SCRIPTING
     Windows Store Apps: ES3_TMPRO;ES3_UGUI;DOTWEEN;DOTWEEN_TEXTMESHPRO;UNITY_VISUAL_SCRIPTING

@@ -1,0 +1,1 @@
+C:\Users\gabri\OneDrive\Documentos\Unity Projects\cozy-castle-dev-test-unity\Library\Bee\Android\Prj\IL2CPP\Gradle\unityLibrary\build\intermediates\cxx\RelWithDebInfo\06sc5xo1\obj\arm64-v8a

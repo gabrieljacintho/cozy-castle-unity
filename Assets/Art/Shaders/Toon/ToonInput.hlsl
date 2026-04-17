@@ -20,22 +20,6 @@ CBUFFER_START(UnityPerMaterial)
     half   _Steps;
     half   _StepSmoothness;
     half   _ShadingOffset;
-
-    half4  _SpecularColor;
-    half   _Glossiness;
-    half   _SpecularThreshold;
-    half   _SpecularSmoothness;
-
-    half4  _RimColor;
-    half   _RimThreshold;
-    half   _RimSmoothness;
-    half   _RimLightAlign;
-
-    half   _AdditionalLightIntensity;
-
-    half4  _OutlineColor;
-    half   _OutlineWidth;
-    half   _OutlineDepthOffset;
 CBUFFER_END
 
 // Only declare textures NOT already declared by SurfaceInput.hlsl.

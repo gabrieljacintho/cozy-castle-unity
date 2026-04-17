@@ -35,23 +35,6 @@ MonoBehaviour:
   m_Active: 1
   _capMaterial: {fileID: 2100000, guid: b9899277f50cf2747bb5cba4c7693ca2, type: 2}
   _capShaderName: GabrielBertasso/MeshSection/MeshSectionCap
---- !u!114 &-4584536443928340283
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 163d34cee9b7a428d9899ab92abd7e0d, type: 3}
-  m_Name: UmbraRenderFeature
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::Umbra.UmbraRenderFeature
-  m_Active: 1
-  m_Shader: {fileID: 0}
-  camerasLayerMask:
-    serializedVersion: 2
-    m_Bits: 255
 --- !u!114 &-4154919828221273861
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,58 +51,6 @@ MonoBehaviour:
   settings:
     captureEvent: 250
     intersectionEvent: 300
---- !u!114 &-979596222604370246
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7cbabd8e2cb2e4f8a930752453adf79a, type: 3}
-  m_Name: Beautify
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::Beautify.Universal.BeautifyRendererFeature
-  m_Active: 1
-  shader: {fileID: 4800000, guid: 55d70ca4ea7504a38b66170bbe587b2f, type: 3}
-  renderPassEvent: 500
-  ignorePostProcessingOption: 0
-  clearXRColorBuffer: 0
-  cameraLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  stripSettings: {fileID: 0}
-  stripBeautifyTonemappingACES: 1
-  stripBeautifyTonemappingACESFitted: 1
-  stripBeautifyTonemappingAGX: 1
-  stripBeautifySharpen: 0
-  stripBeautifySharpenExclusionMask: 1
-  stripBeautifyDithering: 0
-  stripBeautifyEdgeAA: 1
-  stripBeautifyLUT: 1
-  stripBeautifyLUT3D: 1
-  stripBeautifyColorTweaks: 1
-  stripBeautifyBloom: 0
-  stripBeautifyLensDirt: 1
-  stripBeautifyChromaticAberration: 1
-  stripBeautifyDoF: 1
-  stripBeautifyDoFTransparentSupport: 1
-  stripBeautifyEyeAdaptation: 1
-  stripBeautifyPurkinje: 1
-  stripBeautifyVignetting: 0
-  stripBeautifyVignettingMask: 1
-  stripBeautifyOutline: 1
-  stripBeautifyNightVision: 1
-  stripBeautifyThermalVision: 1
-  stripBeautifyFrame: 1
-  stripBeautifyFilmGrain: 1
-  stripUnityFilmGrain: 0
-  stripUnityDithering: 0
-  stripUnityTonemapping: 0
-  stripUnityBloom: 0
-  stripUnityChromaticAberration: 0
-  stripUnityDistortion: 0
-  stripUnityDebugVariants: 0
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -146,12 +77,7 @@ MonoBehaviour:
     probeVolumeBlendStatesCS: {fileID: 0}
   m_RendererFeatures:
   - {fileID: 7218915124726512304}
-  - {fileID: -979596222604370246}
-  - {fileID: 6039183844919475988}
-  - {fileID: 1690927218652292838}
-  - {fileID: -4584536443928340283}
-  - {fileID: -5714743311377879800}
-  m_RendererFeatureMap: b0ba04f90ebd2e64ba1e5af86cc667f214ffb3c1b57dcf53e626cfb058617717c598d1e7647460c0082dc87e3c27b1b0
+  m_RendererFeatureMap: b0ba04f90ebd2e64
   m_UseNativeRenderPass: 0
   xrSystemData: {fileID: 11400000, guid: 60e1133243b97e347b653163a8c01b64, type: 2}
   postProcessData: {fileID: 11400000, guid: 41439944d30ece34e96484bdb6645b55, type: 2}
@@ -172,37 +98,14 @@ MonoBehaviour:
     passOperation: 2
     failOperation: 0
     zFailOperation: 0
-  m_ShadowTransparentReceive: 1
+  m_ShadowTransparentReceive: 0
   m_RenderingMode: 2
   m_DepthPrimingMode: 0
   m_CopyDepthMode: 0
   m_DepthAttachmentFormat: 0
   m_DepthTextureFormat: 0
   m_AccurateGbufferNormals: 0
-  m_IntermediateTextureMode: 1
---- !u!114 &1690927218652292838
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf716a1be50b448e7b1d1968ab734946, type: 3}
-  m_Name: ShinySSRR
-  m_EditorClassIdentifier: ScreenSpaceReflections::ShinySSRR.ShinySSRR
-  m_Active: 1
-  renderPassEvent: 500
-  useDeferred: 0
-  enableScreenSpaceNormalsPass: 0
-  customSmoothnessMetallicPass: 0
-  customSmoothnessMetallicPassSource: 0
-  ignorePostProcessingOption: 1
-  cameraLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  ignoreReflectionProbes: 1
+  m_IntermediateTextureMode: 0
 --- !u!114 &4463285425263604274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -223,25 +126,6 @@ MonoBehaviour:
     IntersectionShader: {fileID: 0}
   _applyMaterial: {fileID: 0}
   _intersectionMaterial: {fileID: 0}
---- !u!114 &6039183844919475988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88bd13fabf96a4cc1aaf221e40805c5c, type: 3}
-  m_Name: RadiantRenderFeature
-  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::RadiantGI.Universal.RadiantRenderFeature
-  m_Active: 1
-  renderingPath: 0
-  ignorePostProcessingOption: 1
-  ignoreOverlayCameras: 1
-  camerasLayerMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &7218915124726512304
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -265,6 +149,6 @@ MonoBehaviour:
     DirectLightingStrength: 0
     Radius: 0.8
     Samples: 2
-    BlurQuality: 0
+    BlurQuality: 2
     Falloff: 100
     SampleCount: -1

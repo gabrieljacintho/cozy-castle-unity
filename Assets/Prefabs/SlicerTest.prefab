@@ -108,3 +108,4 @@ MonoBehaviour:
   intersectionMaterial: {fileID: 2100000, guid: 0554f335a713c4a0d8c7f6d243711c69, type: 2}
   splitDistance: 0
   logText: {fileID: 0}
+  _meshSavePath: Assets/Art/Models/GeneratedMeshes

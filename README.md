@@ -8,7 +8,7 @@ Get ready to dive into the action with these intuitive controls:
 * **Zoom In/Out:** Use the pinch gesture to zoom in or out.
 
 ## Video
-[![](https://img.youtube.com/vi/qZZLYu2Q2JQ/0.jpg)](https://youtube.com/shorts/qZZLYu2Q2JQ?feature=share)
+https://github.com/user-attachments/assets/150229f5-d7ce-4566-959b-4e9b2d5631b5
 
 ## Screenshots
 ![CozyCastle_Screenshot_01](https://github.com/user-attachments/assets/17ca4aae-5b62-4819-afd4-5620e76f0746)
